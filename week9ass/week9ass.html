@@ -1,0 +1,16 @@
+<script>
+
+    symmetricDiff = (first, second) => {
+        return [
+            ...first.filter(n => !second.includes(n)), 
+            ...second.filter(n => !first.includes(n))
+        ];
+    }
+
+    const firstNames = ['james', 'alex', 'mary', 'christian', 'john'];
+    const secondNames = ['mary', 'christian', 'felix'];
+ 
+    const difference = symmetricDiff(firstNames, secondNames);
+    console.log(difference);
+
+</script>
